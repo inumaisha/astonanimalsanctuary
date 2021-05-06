@@ -31,23 +31,9 @@ Route::resource('adopts', 'App\Http\Controllers\AdoptionController');
 
 Route::post('adopts/approve/{id}', 'AdoptionController@adoptApprove');
 Route::post('adopts/reject/{id}', 'AdoptionController@adoptReject');
-
-//Route::get('adopt','App\Http\Controllers\AdoptionController@create');
-//Route::post('adopt','App\Http\Controllers\AdoptionController@store');
-//Route::get('adoptview','App\Http\Controllers\AdoptionController@index');
-//Route::get('edit/{id}','App\Http\Controllers\AdoptionController@edit');
-//Route::post('edit/{id}','App\Http\Controllers\AdoptionController@update');
-
-//Route::resource('animals', 'App\Http\Controllers\AnimalController');
-//Route::post('animals/create', 'AnimalController@store');
 Route::resource('animals', AnimalController::class);
 
-//Route::resource('items','ItemsController');
 
-//Route::resource('user', AnimalController::class);
-
-
-//Route::resource('requests','UserRequestsController');
 Route::get('/requests/{id}', 'App\Http\Controllers\UserRequestsController@show')->name('requests');
 Route::post('/requests/{id}', 'App\Http\Controllers\UserRequestsController@create')->name('requests');
 Route::get('/requestsanimals', 'App\Http\Controllers\UserRequestsController@index')->name('requestsanimals');
